@@ -13,21 +13,26 @@
         comment_lines: comment_lines {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp SLASH>;
+            bindings = <&macro_tap>, <&kp LEFT_CONTROL &kp SLASH>;
+
             label = "COMMENT_LINES";
         };
 
         comment_block: comment_block {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp LEFT_COMMAND &kp SLASH>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp LEFT_COMMAND &kp SLASH>;
+
             label = "COMMENT_BLOCK";
         };
 
         shortcut: shortcut {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND &kp LEFT_SHIFT &kp N5>;
+            bindings = <&macro_press>, <&kp LEFT_COMMAND &kp LEFT_SHIFT &kp N5>;
+
             label = "SHORTCUT";
         };
     };
@@ -73,10 +78,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL   &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET       &kp AMPS        &kp KP_MULTIPLY  &kp LPAR      &kp RPAR      &kp BSPC
-&kp LCTRL  &shortcut  &none   &none     &none     &none        &comment_lines  &comment_block  &none            &bt BT_SEL 0  &bt BT_SEL 0  &bt BT_CLR
-&kp LSHFT  &none      &none   &none     &none     &none        &kp QUESTION    &none           &none            &none         &none         &sys_reset
-                              &kp LGUI  &mo 1     &kp SPACE    &kp RET         &mo 2           &kp RALT
+&kp TAB    &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp KP_MULTIPLY  &kp LPAR          &kp RPAR      &kp BSPC
+&kp LCTRL  &shortcut  &kp APOS  &kp SEMI  &kp BSLH  &kp EQUAL    &kp MINUS     &comment_block  &bt BT_DISC 0    &bt BT_SEL 0      &bt BT_SEL 0  &bt BT_CLR
+&kp LSHFT  &none      &kp PLUS  &kp LBRC  &kp RBRC  &kp HASH     &kp QUESTION  &kp PRCNT       &kp EXCLAMATION  &kp SINGLE_QUOTE  &bt BT_SEL 1  &bt BT_SEL 2
+                                &kp LGUI  &mo 1     &kp SPACE    &kp RET       &mo 2           &kp RALT
             >;
         };
     };
