@@ -63,10 +63,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1        &kp N2        &kp N3        &kp N4             &kp N5       &kp N6    &kp N7          &kp N8    &kp N9           &kp N0         &kp BSPC
-&kp LSHFT  &kp RA(LBKT)  &kp RA(RBKT)  &kp RA(APOS)  &kp RA(BACKSLASH)  &kp MINUS    &kp AMPS  &kp UNDERSCORE  &kp PLUS  &kp RIGHT_BRACE  &kp BACKSLASH  &none
-&kp LCTRL  &kp PIPE      &kp EXCL      &none         &kp AMPERSAND      &kp AT       &kp LEFT  &kp DOWN        &kp UP    &kp RIGHT        &none          &none
-                                       &kp LGUI      &trans             &kp SPACE    &kp RET   &trans          &kp RALT
+&kp TAB    &kp N1        &kp N2        &kp N3        &kp N4             &kp N5       &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
+&kp LSHFT  &kp RA(LBKT)  &kp RA(RBKT)  &kp RA(APOS)  &kp RA(BACKSLASH)  &kp MINUS    &none     &none     &none     &none      &none   &none
+&kp LCTRL  &kp LT        &kp GT        &none         &kp AMPERSAND      &kp AT       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &none   &none
+                                       &kp LGUI      &trans             &kp SPACE    &kp RET   &trans    &kp RALT
             >;
         };
 
@@ -78,10 +78,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL        &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR          &kp RPAR      &kp BSPC
-&kp LCTRL  &comment_lines  &kp SEMI  &kp GT    &kp BSLH  &kp EQUAL    &kp MINUS  &none      &bt BT_DISC 0    &bt BT_SEL 0      &bt BT_SEL 0  &bt BT_CLR
-&kp LSHFT  &none           &kp PLUS  &kp LBRC  &kp RBRC  &kp HASH     &kp PLUS   &kp UNDER  &kp EXCLAMATION  &kp SINGLE_QUOTE  &bt BT_SEL 1  &bt BT_SEL 2
-                                     &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&kp TAB           &kp EXCL        &kp AT  &kp HASH  &kp DLLR       &kp PRCNT            &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR      &kp RPAR      &kp BSPC
+&kp LEFT_SHIFT    &comment_lines  &none   &none     &kp LC(SLASH)  &kp RA(LC(SLASH))    &none      &none     &bt BT_DISC 0    &bt BT_SEL 0  &bt BT_SEL 0  &bt BT_CLR
+&kp LEFT_CONTROL  &none           &none   &none     &none          &none                &none      &none     &none            &none         &bt BT_SEL 1  &bt BT_SEL 2
+                                          &kp LGUI  &trans         &kp SPACE            &kp RET    &trans    &kp RALT
             >;
         };
     };
