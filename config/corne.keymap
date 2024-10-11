@@ -37,6 +37,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        shiftx2 {
+            bindings = <&key_repeat>;
+            key-positions = <12>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -78,10 +87,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB           &kp EXCL        &kp AT        &kp HASH      &kp DLLR       &kp PRCNT            &kp CARET      &kp AMPS       &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LEFT_SHIFT    &comment_lines  &none         &none         &kp LC(SLASH)  &kp RA(LC(SLASH))    &none          &none          &none            &none     &none     &none
-&kp LEFT_CONTROL  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR     &none                &kp LS(EQUAL)  &kp LS(MINUS)  &none            &none     &none     &none
-                                                &kp LGUI      &trans         &kp SPACE            &kp RET        &trans         &kp RALT
+&kp TAB       &kp EXCL        &kp AT        &kp HASH      &kp DLLR      &kp PRCNT        &kp CARET      &kp AMPS       &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
+&bt BT_CLR    &bt BT_CLR_ALL  &none         &none         &bt BT_NXT    &bt BT_PRV       &none          &none          &none            &none     &none     &none
+&bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none            &kp LS(EQUAL)  &kp LS(MINUS)  &none            &none     &none     &none
+                                            &kp LGUI      &trans        &kp LC(LS(F))    &kp LC(F)      &trans         &kp RALT
             >;
         };
     };
